@@ -45,7 +45,7 @@ class DungeonCharacter::DungeonController
 
 
     def list_races
-        response = Dungeons::API.new.race_call
+        response = DungeonCharacter::API.new.race_call
         response["results"].each_with_index do |race, value| 
             puts "#{value + 1}.#{race['name']}"
         end
@@ -66,13 +66,13 @@ class DungeonCharacter::DungeonController
     end
 
     def get_race(input)
-        if Dungeons::Race.get_race_by_name(input)
+        if DungeonCharacter::Race.get_race_by_name(input)
             self.character = Dungeons::Race.get_race_by_name(input)
           else
-            response = Dungeons::API.new.race_info_call(input)
+            response = DungeonCharacter::API.new.race_info_call(input)
             
             if !response["error"]
-              self.character = Dungeons::Race.new(response)
+              self.character = DungeonCharacter::Race.new(response)
             else
               self.error_message
               self.list_races
@@ -97,7 +97,7 @@ class DungeonCharacter::DungeonController
 
 
     def list_klasses
-        response = Dungeons::API.new.klass_call
+        response = DungeonCharacter::API.new.klass_call
         response["results"].each_with_index do |race, value| 
             puts "#{value + 1}.#{race['name']}"
         end
@@ -118,12 +118,12 @@ class DungeonCharacter::DungeonController
     end
 
     def get_klass(input)
-        if Dungeons::Klass.get_klass_by_name(input)
-            self.character = Dungeons::Klass.get_klass_by_name(input)
+        if DungeonCharacter::Klass.get_klass_by_name(input)
+            self.character = DungeonCharacter::Klass.get_klass_by_name(input)
           else
-            response = Dungeons::API.new.klass_info_call(input)
+            response = DungeonCharacter::API.new.klass_info_call(input)
             if !response["error"]
-              self.character = Dungeons::Klass.new(response)
+              self.character = DungeonCharacter::Klass.new(response)
             else
               self.error_message
               self.list_klasses

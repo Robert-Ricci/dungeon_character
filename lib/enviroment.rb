@@ -1,4 +1,4 @@
-require_relative "dungeons/version"
+require_relative "dungeon_character/version"
 require 'pry'
 require 'httparty'
 require 'colorize'
