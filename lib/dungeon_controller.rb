@@ -1,5 +1,5 @@
 require 'pry'
-class Dungeons::DungeonController
+class DungeonCharacter::DungeonController
 
     attr_accessor :character
     

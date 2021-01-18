@@ -1,4 +1,4 @@
-class Dungeons::Klass
+class DungeonCharacter::Klass
 
     attr_accessor :name, :hit_die, :proficiency_choices, :_id, :index, :proficiencies, :saving_throws, :starting_equipment, :class_levels,
     :subclasses,:spellcasting, :url

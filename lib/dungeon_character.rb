@@ -8,7 +8,7 @@ require_relative './api'
 require_relative './dungeon_controller'
 
 
-module Dungeons
+module DungeonCharacter
   class Error < StandardError; end
   # Your code goes here...
 end

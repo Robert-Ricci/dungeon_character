@@ -1,4 +1,4 @@
-class Dungeons::API
+class DungeonCharacter::API
 
     require 'httparty'
 

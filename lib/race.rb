@@ -1,4 +1,4 @@
-class Dungeons::Race
+class DungeonCharacter::Race
 
     attr_accessor :_id, :index, :name, :speed, :ability_bonuses, :age, :alignment, :size, :size_description, :starting_proficiencies,
     :languages, :language_desc, :traits, :subraces, :url, :starting_proficiency_options, :language_options, :ability_bonus_options,
